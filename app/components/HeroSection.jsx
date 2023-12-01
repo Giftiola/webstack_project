@@ -3,9 +3,12 @@ import React from "react";
 import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
-import Link from "next/link";
+
 
 const HeroSection = () => {
+
+  const pdfUrl = "/pdf/Darijo_Tepic_Resume.pdf"; 
+
   return (
     <section className="lg:py-16">
       <div className="grid grid-cols-1 sm:grid-cols-12">
@@ -41,14 +44,18 @@ const HeroSection = () => {
             voluptatum.
           </p>
           <div>
-            <Link
-              href="/"
+            <a
+            href={pdfUrl}
               className="px-1 inline-block py-1 w-full sm:w-fit mt-3 rounded-full bg-gradient-to-br from-[#2869d9] to-[#46caef] hover:bg-[#1e293b] text-white whitespace-nowrap"
+              passhref="true"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="My Resume - Download Darijo Online Resume"
             >
               <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
                 My Resume
               </span>
-            </Link>
+            </a>
           </div>
         </motion.div>
         <motion.div
